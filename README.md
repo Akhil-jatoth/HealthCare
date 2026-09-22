@@ -172,6 +172,8 @@ npm run dev
 ## 👥 Contributors
 
 - **Akhil Jatoth** ([@Akhil-jatoth](https://github.com/Akhil-jatoth))
+- **Abhignya** ([@Abhignya005](https://github.com/Abhignya005))
+- **Reshma Sulthana** ([@ReshmaSulthana023](https://github.com/ReshmaSulthana023))
 
 ---
 
