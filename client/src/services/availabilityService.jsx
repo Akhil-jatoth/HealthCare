@@ -1,7 +1,7 @@
 import axios from "axios";
+import { API_BASE } from "./apiConfig";
 
-const API_URL =
-  "http://localhost:5000/api/availability";
+const API_URL = `${API_BASE}/availability`;
 
 // Get Doctor Availability
 export const getDoctorAvailability =

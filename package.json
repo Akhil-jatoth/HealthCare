@@ -1,0 +1,22 @@
+{
+  "name": "swasthya-saathi-healthcare",
+  "version": "1.0.0",
+  "description": "AI-Powered Rural Telemedicine & Healthcare Network",
+  "main": "server/src/server.js",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "node server/src/server.js",
+    "server": "cd server && node src/server.js",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "rural-healthcare",
+    "telemedicine",
+    "ai-triage",
+    "gemini",
+    "google-maps"
+  ],
+  "author": "Akhil Jatoth",
+  "license": "MIT"
+}

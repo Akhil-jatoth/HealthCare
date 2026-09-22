@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE } from "./apiConfig";
 
-const API_URL = "http://localhost:5000/api/medicines";
+const API_URL = `${API_BASE}/medicines`;
 
 // Get all medicines for a specific patient
 export const getMedicinesByPatient = async (patientId) => {

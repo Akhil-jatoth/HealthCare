@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useToast } from "../context/ToastContext";
+import { API_BASE } from "../services/apiConfig";
 import axios from "axios";
 import "../styles/AuthModal.css";
 
@@ -20,11 +21,11 @@ const AuthModal = ({ isOpen, onClose, defaultRole = "demo", onAuthSuccess }) => 
       setPassword("");
 
       // Fetch live doctors and patients from backend
-      axios.get("http://localhost:5000/api/doctors")
+      axios.get(`${API_BASE}/doctors`)
         .then(res => setAvailableDoctors(res.data.data || []))
         .catch(() => {});
 
-      axios.get("http://localhost:5000/api/patients")
+      axios.get(`${API_BASE}/patients`)
         .then(res => setAvailablePatients(res.data.data || []))
         .catch(() => {});
     }
@@ -61,7 +62,7 @@ const AuthModal = ({ isOpen, onClose, defaultRole = "demo", onAuthSuccess }) => 
     const targetRole = activeTab === "doctor" ? "doctor" : "patient";
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post(`${API_BASE}/auth/login`, {
         email: email.trim().toLowerCase(),
         password: password.trim(),
         role: targetRole,
@@ -91,7 +92,7 @@ const AuthModal = ({ isOpen, onClose, defaultRole = "demo", onAuthSuccess }) => 
     if (activeTab !== role) setActiveTab(role);
 
     setLoading(true);
-    axios.post("http://localhost:5000/api/auth/login", {
+    axios.post(`${API_BASE}/auth/login`, {
       email: fillEmail.toLowerCase(),
       password: fillPass,
       role: role,

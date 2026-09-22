@@ -140,6 +140,33 @@ npm run dev
 
 ---
 
+## 🌐 Deploying to Render (Live Web Service)
+
+This repository is pre-configured with a unified full-stack architecture for **1-Click Render Deployment**:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Akhil-jatoth/HealthCare)
+
+### Manual Render Setup Steps:
+1. Log in to [Render Dashboard](https://dashboard.render.com/).
+2. Click **New +** > **Web Service**.
+3. Connect your GitHub repository: `https://github.com/Akhil-jatoth/HealthCare.git`.
+4. Configure service settings:
+   - **Name**: `swasthya-saathi`
+   - **Environment**: `Node`
+   - **Region**: `Oregon (US West)` or nearest
+   - **Branch**: `main`
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+5. Under **Environment Variables**, add:
+   - `NODE_ENV`: `production`
+   - `MONGO_URI`: `your_mongodb_connection_string`
+   - `JWT_SECRET`: `your_jwt_secret_key`
+   - `GEMINI_API_KEY`: `your_gemini_api_key`
+6. Click **Create Web Service**.
+7. Once deployed, Render will provide your working live URL: `https://swasthya-saathi.onrender.com`!
+
+---
+
 ## 🔑 Demo Test Credentials
 
 | Role | Name | Email | Password |

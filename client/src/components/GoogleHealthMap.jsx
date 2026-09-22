@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "../context/ToastContext";
+import { API_BASE } from "../services/apiConfig";
 import axios from "axios";
 import "../styles/GoogleHealthMap.css";
 
@@ -109,7 +110,7 @@ const GoogleHealthMap = ({ initialSpecialty = "ALL", onSelectDoctor }) => {
 
   // Fetch doctors from backend and merge with coordinates
   useEffect(() => {
-    axios.get("http://localhost:5000/api/doctors")
+    axios.get(`${API_BASE}/doctors`)
       .then((res) => {
         const docs = res.data?.data || [];
         if (docs.length > 0) {

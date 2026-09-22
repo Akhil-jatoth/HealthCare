@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE } from "./apiConfig";
 
-const API_URL = "http://localhost:5000/api/doctors";
+const API_URL = `${API_BASE}/doctors`;
 
 // Register Doctor
 export const registerDoctor = async (doctorData) => {

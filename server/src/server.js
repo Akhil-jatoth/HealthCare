@@ -87,7 +87,33 @@ app.use("/api/medicines", medicineRoutes);
 app.get("/ping", (req, res) => {
   res.json({
     status: "ok",
+    environment: process.env.NODE_ENV || "production",
+    timestamp: new Date().toISOString(),
   });
+});
+
+// ==========================================
+// Production Static Serving & SPA Fallback
+// ==========================================
+
+const clientDist = path.resolve(__dirname, "../../client/dist");
+const fs = require("fs");
+
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+}
+
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api")) return next();
+  const indexPath = path.join(clientDist, "index.html");
+  if (fs.existsSync(indexPath)) {
+    return res.sendFile(indexPath);
+  }
+  const demoPath = path.join(frontendRoot, "demo.html");
+  if (fs.existsSync(demoPath)) {
+    return res.sendFile(demoPath);
+  }
+  res.send("Swasthya Saathi API is live.");
 });
 
 // ==========================================

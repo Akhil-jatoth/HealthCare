@@ -1,7 +1,7 @@
 import axios from "axios";
+import { API_BASE } from "./apiConfig";
 
-const API_URL =
-  "http://localhost:5000/api/notifications";
+const API_URL = `${API_BASE}/notifications`;
 
 export const getDoctorNotifications =
   async (doctorId) => {
