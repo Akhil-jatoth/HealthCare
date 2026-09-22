@@ -1,0 +1,50 @@
+.app-root-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.app-main-content {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Common loading & empty styles across components */
+.loading-state,
+.loading {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #475569;
+  gap: 16px;
+  padding: 40px;
+}
+
+.empty-state {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 40px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-state h3 {
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}

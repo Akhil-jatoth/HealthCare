@@ -1,0 +1,41 @@
+.patient-register-page {
+  max-width: 780px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+.patient-register-card {
+  padding: 40px 42px;
+}
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-2 {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row-3 {
+  display: flex;
+  gap: 16px;
+}
+
+.patient-submit-btn {
+  margin-top: 14px;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .patient-register-card {
+    padding: 28px 20px;
+  }
+  .form-row-2,
+  .form-row-3 {
+    flex-direction: column;
+  }
+}

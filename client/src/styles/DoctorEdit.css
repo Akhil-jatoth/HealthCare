@@ -1,0 +1,42 @@
+.edit-page {
+  max-width: 860px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+.edit-card {
+  padding: 38px 42px;
+}
+
+.edit-header {
+  margin-bottom: 26px;
+}
+
+.edit-header h2 {
+  font-size: 2.1rem;
+  color: #0f172a;
+  margin: 8px 0 4px;
+}
+
+.edit-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.edit-save-btn {
+  margin-top: 14px;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .edit-card {
+    padding: 24px 20px;
+  }
+}

@@ -1,0 +1,421 @@
+.google-health-map-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.map-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.map-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf9;
+  border: 1px solid #ccfbf1;
+  color: #0f766e;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.map-title-block h3 {
+  font-size: 1.45rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.map-title-block p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.map-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gps-locate-btn {
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.map-layer-toggle {
+  display: flex;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 8px;
+  gap: 2px;
+}
+
+.layer-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.layer-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+/* Filter toolbar */
+.map-filter-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.map-search-input {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 6px 12px;
+  gap: 8px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.map-search-input input {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+}
+
+.map-search-input button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.map-filter-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.map-chip {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.map-chip.active {
+  background: #0d9488;
+  color: #ffffff;
+  border-color: #0d9488;
+}
+
+/* Map grid layout */
+.map-viewport-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+  gap: 18px;
+  min-height: 480px;
+}
+
+@media (max-width: 900px) {
+  .map-viewport-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-canvas-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: inset 0 2px 6px rgba(15, 23, 42, 0.05);
+  min-height: 450px;
+}
+
+.leaflet-map-element {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  z-index: 1;
+}
+
+.map-overlay-guide {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  z-index: 500;
+  pointer-events: none;
+}
+
+/* Custom Marker Pins */
+.custom-map-pin {
+  width: 38px;
+  height: 38px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.custom-map-pin span {
+  transform: rotate(45deg);
+  font-size: 1.15rem;
+}
+
+.custom-map-pin:hover {
+  transform: rotate(-45deg) scale(1.15);
+}
+
+.pin-doctor {
+  background: #0d9488;
+  border: 2px solid #ffffff;
+}
+
+.pin-phc {
+  background: #0284c7;
+  border: 2px solid #ffffff;
+}
+
+.pin-emergency {
+  background: #ef4444;
+  border: 2px solid #ffffff;
+}
+
+.user-gps-pin {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.gps-pulse-ring {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #0d9488;
+  animation: gpsPulse 2s infinite ease-out;
+}
+
+@keyframes gpsPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Sidebar detail card */
+.map-details-sidebar {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.facility-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.facility-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facility-type-tag {
+  background: #f0fdf9;
+  border: 1px solid #ccfbf1;
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.facility-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.facility-detail-card h4 {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.facility-spec {
+  color: #0d9488;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.facility-hospital {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.facility-info-list {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.info-row strong {
+  color: #0f172a;
+  text-align: right;
+}
+
+.facility-action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.map-nav-btn {
+  width: 100%;
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Placeholder card */
+.facility-placeholder-card {
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.placeholder-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.facility-placeholder-card h4 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.facility-placeholder-card p {
+  font-size: 0.86rem;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.quick-centers-list {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quick-list-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0d9488;
+  text-transform: uppercase;
+}
+
+.quick-center-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-center-item:hover {
+  border-color: #0d9488;
+  background: #f0fdf9;
+}
+
+.qc-icon {
+  font-size: 1.2rem;
+}
+
+.qc-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.qc-sub {
+  font-size: 0.76rem;
+  color: #64748b;
+}

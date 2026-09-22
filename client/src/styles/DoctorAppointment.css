@@ -1,0 +1,155 @@
+.doctor-appts-page {
+  max-width: 1100px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+.doctor-portal-header {
+  padding: 30px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.doctor-portal-header h1 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin: 8px 0 4px;
+}
+
+.doctor-portal-header p {
+  color: #64748b;
+  font-size: 0.98rem;
+}
+
+.doctor-nav-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.doctor-appts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.doctor-appt-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doctor-appt-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.patient-avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pat-avatar-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.patient-avatar-name h2 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.pat-phone-sub {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.patient-appt-meta-grid {
+  background: rgba(248, 250, 252, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.meta-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-cell.full-width {
+  grid-column: 1 / -1;
+  border-top: 1px dashed rgba(203, 213, 225, 0.8);
+  padding-top: 8px;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.meta-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.doctor-card-action-row {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-accept,
+.btn-video-meet {
+  flex: 1.4;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-decline,
+.btn-complete {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.badge-completed-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.paid-status-note {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .doctor-portal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}

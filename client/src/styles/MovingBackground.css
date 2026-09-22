@@ -1,0 +1,167 @@
+/* Ambient Moving Background Canvas */
+.moving-background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background: #f4f7f9;
+}
+
+/* Floating Gradient Orbs */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  will-change: transform;
+}
+
+/* Primary Teal Orb */
+.orb-primary {
+  width: 550px;
+  height: 550px;
+  top: -120px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.4) 0%, rgba(45, 212, 191, 0.15) 60%, transparent 80%);
+  animation: floatOrb1 18s ease-in-out infinite alternate;
+}
+
+/* Electric Cyan Orb */
+.orb-cyan {
+  width: 500px;
+  height: 500px;
+  top: 15%;
+  right: -80px;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, rgba(56, 189, 248, 0.12) 65%, transparent 80%);
+  animation: floatOrb2 22s ease-in-out infinite alternate;
+}
+
+/* Soft Indigo Orb */
+.orb-indigo {
+  width: 600px;
+  height: 600px;
+  bottom: -150px;
+  left: 15%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.25) 0%, rgba(129, 140, 248, 0.08) 60%, transparent 80%);
+  animation: floatOrb3 24s ease-in-out infinite alternate;
+}
+
+/* Emerald Orb */
+.orb-emerald {
+  width: 480px;
+  height: 480px;
+  bottom: 10%;
+  right: 10%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, rgba(52, 211, 153, 0.1) 60%, transparent 80%);
+  animation: floatOrb4 20s ease-in-out infinite alternate;
+}
+
+/* Central Drifting Glow */
+.orb-center {
+  width: 650px;
+  height: 650px;
+  top: 40%;
+  left: 35%;
+  background: radial-gradient(circle, rgba(204, 251, 241, 0.5) 0%, rgba(240, 253, 249, 0.2) 60%, transparent 80%);
+  animation: floatOrbCenter 26s ease-in-out infinite alternate;
+}
+
+/* Moving Grid Texture Overlay */
+.moving-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.8;
+  animation: gridDrift 30s linear infinite;
+}
+
+/* Ambient Top Light Beam */
+.ambient-light-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 280px;
+  background: linear-gradient(180deg, rgba(204, 251, 241, 0.45) 0%, rgba(244, 247, 249, 0) 100%);
+  opacity: 0.7;
+}
+
+/* Smooth Keyframe Animations */
+@keyframes floatOrb1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(120px, 80px, 0) scale(1.12);
+  }
+  100% {
+    transform: translate3d(60px, 160px, 0) scale(0.95);
+  }
+}
+
+@keyframes floatOrb2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-100px, 110px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-60px, 50px, 0) scale(1.15);
+  }
+}
+
+@keyframes floatOrb3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(140px, -90px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-80px, -60px, 0) scale(0.92);
+  }
+}
+
+@keyframes floatOrb4 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-120px, -80px, 0) scale(1.14);
+  }
+  100% {
+    transform: translate3d(40px, -110px, 0) scale(0.98);
+  }
+}
+
+@keyframes floatOrbCenter {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(-70px, 50px, 0) scale(1.06);
+  }
+  66% {
+    transform: translate3d(60px, -40px, 0) scale(0.95);
+  }
+  100% {
+    transform: translate3d(-30px, 30px, 0) scale(1.02);
+  }
+}
+
+@keyframes gridDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(48px, 48px, 0);
+  }
+}

@@ -1,0 +1,79 @@
+.register-page-container {
+  max-width: 860px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+.register-card {
+  padding: 40px 42px;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin: 10px 0 6px;
+}
+
+.register-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.register-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0d9488;
+  border-bottom: 1.5px dashed rgba(203, 213, 225, 0.8);
+  padding-bottom: 8px;
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input-row-2 {
+  display: flex;
+  gap: 16px;
+}
+
+.input-row-3 {
+  display: flex;
+  gap: 16px;
+}
+
+.register-submit-btn {
+  margin-top: 16px;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .register-card {
+    padding: 28px 20px;
+  }
+  .input-row-2,
+  .input-row-3 {
+    flex-direction: column;
+  }
+}

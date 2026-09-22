@@ -1,0 +1,360 @@
+.home-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 24px 80px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 40px 10px 30px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #f0fdf9;
+  border: 1px solid #ccfbf1;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f766e;
+  margin-bottom: 20px;
+}
+
+.badge-glow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
+}
+
+.hero-title span {
+  color: #0d9488;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.hero-btn-main {
+  font-size: 1.05rem;
+  padding: 14px 28px;
+}
+
+.hero-btn-demo {
+  font-size: 1.05rem;
+  padding: 14px 24px;
+}
+
+/* Stats Row */
+.hero-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0d9488;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Triage Section */
+.triage-section {
+  margin: 50px 0;
+}
+
+.triage-card {
+  padding: 32px 36px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.triage-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.triage-icon-badge {
+  font-size: 2.2rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: #f0fdf9;
+  border: 1px solid #ccfbf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triage-header h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.triage-header p {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.triage-input-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.triage-input-wrapper input {
+  font-size: 1rem;
+  padding: 14px 18px;
+}
+
+.triage-analyze-btn {
+  white-space: nowrap;
+  padding: 14px 24px;
+}
+
+.quick-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chips-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.chip-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+}
+
+.chip-btn:hover {
+  background: #0d9488;
+  color: white;
+  border-color: #0d9488;
+}
+
+.triage-result-card {
+  margin-top: 24px;
+  background: #ffffff;
+  border: 1.5px solid #86efac;
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.triage-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.triage-spec-highlight {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.triage-spec-highlight strong {
+  color: #0f766e;
+}
+
+.triage-advice {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+/* Gateways Section */
+.gateways-section {
+  margin: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 36px;
+}
+
+.role-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.role-card {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top-icon {
+  font-size: 3rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.role-badge {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0d9488;
+  margin-bottom: 8px;
+}
+
+.doctor-badge {
+  color: #4f46e5;
+}
+
+.role-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.role-card p {
+  color: #64748b;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.role-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+  color: #334155;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.role-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-btn-stack {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Features Grid */
+.highlights-section {
+  margin-top: 70px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  padding: 26px 22px;
+  text-align: left;
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.feature-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .triage-input-wrapper {
+    flex-direction: column;
+  }
+  .role-selection-grid {
+    grid-template-columns: 1fr;
+  }
+}

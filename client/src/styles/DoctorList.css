@@ -1,0 +1,295 @@
+.doctor-list-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 24px 80px;
+}
+
+/* Header */
+.doctor-list-header {
+  padding: 32px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.header-text-block {
+  max-width: 700px;
+}
+
+.header-text-block h1 {
+  font-size: 2.2rem;
+  margin: 10px 0 6px;
+  color: #0f172a;
+}
+
+.header-text-block p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.header-action-block {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Search & Filter Bar */
+.doctor-search-bar {
+  padding: 18px 24px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 1.1rem;
+  color: #94a3b8;
+}
+
+.search-input-field input {
+  padding-left: 46px;
+  padding-right: 40px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.specialty-filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.spec-pill-btn {
+  background: rgba(241, 245, 249, 0.85);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.spec-pill-btn:hover {
+  border-color: #0d9488;
+  color: #0d9488;
+  background: rgba(13, 148, 136, 0.08);
+}
+
+.spec-pill-btn.active {
+  background: #0d9488;
+  color: white;
+  border-color: #0d9488;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+}
+
+/* Doctor Grid */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.doctor-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card-top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.doctor-avatar-wrapper {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.doctor-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.doctor-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.15), rgba(6, 182, 212, 0.2));
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.online-badge-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #10b981;
+  border: 2.5px solid white;
+}
+
+.doctor-primary-info {
+  flex: 1;
+}
+
+.doctor-tag-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.doctor-name {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.doctor-qual {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.doctor-details-body {
+  background: rgba(248, 250, 252, 0.7);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.detail-val {
+  font-size: 0.88rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.detail-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed rgba(203, 213, 225, 0.8);
+  padding-top: 8px;
+}
+
+.detail-highlight {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.fee-box {
+  text-align: right;
+}
+
+.fee-tag {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #0d9488;
+}
+
+.doctor-card-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.card-btn-book {
+  flex: 1.6;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+}
+
+.card-btn-profile {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+}
+
+/* Loading & Empty states */
+.loading-state,
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.pulse-spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px solid #ccfbf1;
+  border-top-color: #0d9488;
+}
+
+.empty-icon {
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .doctor-list-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+}
